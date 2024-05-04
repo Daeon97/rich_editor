@@ -162,6 +162,17 @@ class RichEditorState extends State<RichEditor> {
     if (widget.editorOptions!.baseFontFamily != null)
       await javascriptExecutor
           .setBaseFontFamily(widget.editorOptions!.baseFontFamily!);
+
+    if(widget.editorOptions!.fontSize != null) {
+      final actualSize = widget.editorOptions!.fontSize!;
+      int convertedSize = actualSize % 7;
+
+      if(convertedSize == 0)
+        convertedSize = 1;
+
+      await javascriptExecutor
+          .setFontSize(convertedSize);
+    }
   }
 
   _addJSListener() async {

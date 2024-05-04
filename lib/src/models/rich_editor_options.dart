@@ -5,6 +5,7 @@ import 'enum/bar_position.dart';
 class RichEditorOptions {
   Color? backgroundColor;
   Color? baseTextColor;
+  int? fontSize;
   EdgeInsets? padding;
   String? placeholder;
   String? baseFontFamily;
@@ -14,6 +15,7 @@ class RichEditorOptions {
   RichEditorOptions({
     Color? backgroundColor,
     Color? baseTextColor,
+    int? fontSize,
     EdgeInsets? padding,
     String? placeholder,
     String? baseFontFamily,
@@ -22,6 +24,7 @@ class RichEditorOptions {
   }) {
     this.backgroundColor = backgroundColor;
     this.baseTextColor = baseTextColor;
+    this.fontSize = fontSize;
     this.padding = padding;
     this.placeholder = placeholder;
     this.baseFontFamily = baseFontFamily;
